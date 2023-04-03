@@ -6,3 +6,5 @@ System
 Project Repository
 - name the git repo from which we are using the shared library
 - now the game of variables comes to place
+- ALL THE GROOVY SHOULD BE UNDER THE VARS FOLDER ONLY
+- now we are adding parameters here
