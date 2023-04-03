@@ -25,7 +25,7 @@ pipeline {
         }
         stage ('Maven Integration Test'){
             steps {
-                mvnIntegrationtest()
+                mvnIntegrationTest()
             }
         }
     }
