@@ -12,7 +12,7 @@ pipeline {
                     // name of the function is gitCheckout
                     // we have passed 2 variables github branch and url
                     gitCheckout (
-                        branch: "master"
+                        branch: "master",
                         // url for the java app
                         url: "https://github.com/formycore/shared_jenkins_lbs_project.git"
                     )
