@@ -5,11 +5,11 @@
 pipeline {
     agent any
     parameters {
-        choice (name:'actions',choices: 'create\ndelete', description: 'Choose Create or Delete')
+        choice (name:'actions', choices: 'create\ndelete', description: 'Choose Create or Delete')
     }
     stages {
         stage ('Git Checkout'){
-            when { expression { params.action == 'create' }}
+            when { expression { params.action == 'create' } }
             steps {
                     // git 'https://github.com/formycore/shared_jenkins_lbs_project.git'
                     // name of the function is gitCheckout
@@ -23,7 +23,7 @@ pipeline {
             }
         }
         stage ('Mvn test'){
-            when { expression { params.action == 'create' }}
+            when { expression { params.action == 'create' } }
             steps {
                 script {
                 mvnTest()
@@ -31,7 +31,7 @@ pipeline {
             }
         }
         stage ('Maven Integration Test'){
-            when { expression { params.action == 'create' }}
+            when { expression { params.action == 'create' } }
             steps {
                 script {
                 mvnIntegrationTest()
@@ -40,7 +40,7 @@ pipeline {
             }
         }
         stage ('Static code analysis') {
-            when { expression { params.action == 'create' }}
+            when { expression { params.action == 'create' } }
             steps {
                 script {
                     staticCodeAnalysis()
