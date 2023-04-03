@@ -18,5 +18,10 @@ pipeline {
                 
             }
         }
+        stage ('Mvn test'){
+            steps {
+                mvnTest ()
+            }
+        }
     }
 }
