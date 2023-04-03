@@ -18,13 +18,13 @@ pipeline {
                 
             }
         }
-        // stage ('Mvn test'){
-        //     steps {
-        //         script {
-        //         mvnTest()
-        //         }
-        //     }
-        // }
+        stage ('Mvn test'){
+            steps {
+                script {
+                mvnTest()
+                }
+            }
+        }
         // stage ('Maven Integration Test'){
         //     steps {
         //         script {
@@ -32,14 +32,5 @@ pipeline {
         //         }
         //     }
         // }
-        stage('Integration Test maven'){
-        
-            steps{
-               script{
-                   
-                   mvnIntegrationTest()
-               }
-            }
-        }
     }
 }
