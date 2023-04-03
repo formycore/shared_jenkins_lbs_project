@@ -1,0 +1,8 @@
+- pipeline with scm
+- under 
+Dashboard
+Manage Jenkins
+System
+Project Repository
+- name the git repo from which we are using the shared library
+- now the game of variables comes to place
