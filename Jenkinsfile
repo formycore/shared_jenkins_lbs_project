@@ -5,9 +5,6 @@
 // space and _ are used to pull all the functions 
 pipeline {
     agent any
-    tools {
-        maven '3.6.3'
-    }
     parameters {
         //choice (name:'actions', choices: 'create\ndelete', description: 'Choose Create or Delete')
         choice(name: 'action', choices: 'create\ndelete', description: 'Choose create/Destroy')
@@ -49,7 +46,7 @@ pipeline {
             when { expression {  params.action == 'create' } }
             steps {
                 script {
-                    def SonarQubecredentialsId = 'sonar-apia'
+                    def SonarQubecredentialsId = 'sonar-api'
                     staticCodeAnalysis(SonarQubecredentialsId)
                 }
             }
@@ -58,7 +55,7 @@ pipeline {
             when { expression {  params.action == 'create' } }
             steps {
                 script {
-                    def SonarQubecredentialsId = 'sonar-apia'
+                    def SonarQubecredentialsId = 'sonar-api'
                     QualityGateStatus(SonarQubecredentialsId)
                 }
             }
