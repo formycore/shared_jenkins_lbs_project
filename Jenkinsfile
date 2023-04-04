@@ -46,14 +46,13 @@ pipeline {
             when { expression {  params.action == 'create' } }
             steps {
                 script {
-                    def SonarQubecredentialsId = 'sonar-api'
+                    def SonarQubecredentialsId = 'sonar-apia'
                     staticCodeAnalysis(SonarQubecredentialsId)
                 }
             }
         }
         stage ('Quality Gate Check') {
             when { expression {  params.action == 'create' } }
-            //when { expression {  params.action == 'create' } }
             steps {
                 script {
                     def SonarQubecredentialsId = 'sonar-apia'

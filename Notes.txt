@@ -4,6 +4,12 @@ Dashboard
 Manage Jenkins
 System
 Project Repository
+- install these plugins
+    - SonarQube Generic Coverage Plugin
+    - SonarQube Scanner for Jenkins
+    - Quality Gates Plugin 
+    - Sonar Quality Gates Plugin Version 
+    
 - first create a file in shared lib repo
 ******************************************************************************************************
     - gitCheckout.groovy
