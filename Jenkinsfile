@@ -19,7 +19,8 @@ pipeline {
                     gitCheckout (
                         branch: "master",
                         // url for the java app
-                        url: "https://github.com/formycore/shared_jenkins_lbs_project.git"
+                        //url: "https://github.com/formycore/shared_jenkins_lbs_project.git"
+                       url: "https://github.com/formycore/github_actions_java_techie.git"
                     )
                 
             }
